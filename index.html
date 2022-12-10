@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPEN DAY</title>
+  <link rel="icon" href="./images/icona.png">
+  <style>
+  body{
+    height: 98vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(https://www.gazzettadellevalli.it/gdv/wp-content/uploads/2015/10/ivan-piana-istituto.jpg) bottom center no-repeat;
+    background-size: cover;
+  }
+  .title{
+    width: max-content;
+    border: 1px solid gray;
+    border-radius: 1.5vw;
+    height: 20vh;
+    box-shadow: 0px 0px 60px 0px black;
+  }
+  .txt {
+    cursor: default;
+    font: italic bold 80px Verdana;
+    color: red;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+  }
+  </style>
+</head>
+<body>
+  <div class="title">
+    <div class="txt">
+      OPEN DAY IVAN PIANA 2022
+    </div>
+  </div>
+  <script>
+    document.body.addEventListener('click', () => {
+      location.href = 'site.html';
+    });
+  </script>
+</body>
+</html>

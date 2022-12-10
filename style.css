@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Open+Sans:wght@300;400;500;600;700;800&family=Zen+Dots&display=swap');
+
+#item1{
+  grid-area: item1;
+}
+#item2{
+  grid-area: item2;
+}
+#item3{
+  grid-area: item3;
+}
+#item4{
+  grid-area: item4;
+}
+#item5{
+  grid-area: item5;
+}
+#item6{
+  grid-area: item6;
+}
+#item7{
+  grid-area: item7;
+}
+#item8{
+  grid-area: item8;
+}
+#item9{
+  grid-area: item9;
+}
+#item10{
+  grid-area: item10;
+}
+#item11{
+  grid-area: item11;
+}
+#item12{
+  grid-area: item12;
+}
+
+.back{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: url(./images/back_arrow.png) center center no-repeat;
+  background-size: 2vh;
+  height: 2vh;
+  width: 2vw;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  transition: all 1s ease-in-out linear;
+}
+
+*{
+  font: italic bold 2vw 'Zen Dots';
+}
+
+.content{
+  width: 18vw;
+  border-radius: 1vh;
+  border:1px solid blue;
+  height: 25vh;
+}
+
+.container{
+  width: fit-content;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3vh;
+  transition: all .5s ease-in-out;
+  border-radius: .5vw;
+}
+
+.container:hover{
+  transform: scale(1.1);
+}
+
+.container:hover > .title{
+  background: linear-gradient(45deg, black, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title{
+  width: 22vw;
+  /*-webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));*/
+  cursor: default;
+  text-align: center;
+  background: linear-gradient(45deg, blue, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div.main {
+  display: grid;
+  grid-template-areas:
+  'item1 item2 item3 item4'
+  'item5 item6 item7 item8'
+  'item9 item10 item11 item12';
+  gap: 1vw;
+  padding: 1vh;
+  overflow: hidden;
+}
+
+div.center:hover{
+  transform: scale(1.5);
+}
+
+.center {
+  position: absolute;
+  top: 30%;
+  right: 43%;
+  transform: scale(1.5);
+  box-shadow: 0px 0px 60px 0px black;
+}
+
+.hidden {
+  display: none;
+}
+
+p {
+  cursor: pointer;
+  border-radius: 2.5vw;
+  padding: .2vw;
+}
+
+.container-azioni {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  position: absolute;
+  top: 75%;
+  left: 45%;
+  border: none;
+  border-radius: .5vw;
+  width: fit-content;
+  box-shadow: 0px 0px 10px 0px black;
+}
+
+.container-azioni.hidden {
+  display: none;
+}
+
+.insta {
+  background: url(https://cdn-icons-png.flaticon.com/128/2111/2111463.png) center center no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  transition: all .4s linear;
+}
+
+.insta:hover, .audio:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.audio {
+  background: url(https://cdn-icons-png.flaticon.com/128/104/104695.png) center center no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  transition: all .4s linear;
+}
+
+@media(max-width: 1200px){ /*PC*/
+  div.main {
+    display: grid;
+    grid-template-areas:
+    'item1 item2 item3 item4'
+    'item5 item6 item7 item8'
+    'item9 item10 item11 item12';
+    overflow: hidden;
+  }
+}
+@media(max-width: 980px){ /*Tablet*/
+  div.main {
+    display: grid;
+    grid-template-areas:
+    'item1 item2 item3'
+    'item4 item5 item6'
+    'item7 item8 item9'
+    'item10 item11 item12';
+  }
+  .content {
+    width: 30vw;
+  }
+  .title {
+    width: 28vw;
+    font-size: 22px;
+  }
+  .center{
+    position: absolute;
+    top: 30%;
+    right: 35%;
+    transform: scale(1.5);
+    box-shadow: 0px 0px 60px 0px black;
+  }
+}
+@media(max-width: 767px){ /*Tablet*/
+  div.main {
+    display: grid;
+    grid-template-areas:
+    'item1 item2'
+    'item3 item4'
+    'item5 item6'
+    'item7 item8'
+    'item9 item10'
+    'item11 item12';
+  }
+  .content {
+    color: #a05509;
+    width: 40vw;
+  }
+  .title {
+    width: 28vw;
+    font-size: 18px;
+  }
+  .center{
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    transform: scale(1.5);
+    box-shadow: 0px 0px 60px 0px black;
+  }
+}
+@media(max-width: 480px){ /*Telefono*/
+  div.main {
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    width: 50vw;
+  }
+  .title {
+    width: 50vw;
+    font-size: 18px;
+  }
+  .center{
+    position: absolute;
+    top: 30%;
+    right: 25%;
+    transform: scale(1.5);
+    box-shadow: 0px 0px 60px 0px black;
+  }
+  .container-azioni{
+    position: absolute;
+    top: 75%;
+    left: 35%;
+  }
+}
